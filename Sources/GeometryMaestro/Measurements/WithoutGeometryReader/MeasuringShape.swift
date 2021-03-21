@@ -18,6 +18,7 @@ internal struct MeasuringShape: Shape {
             /*
              Need to separate updating the State from updating the View
              */
+            // TODO: This shouldn't be necessary, but is in certain stacks and views (ZStack, overlays, Navigation)
             self.size = rect.size
         }
         return path

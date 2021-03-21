@@ -186,4 +186,10 @@ public extension View {
     func equalSize<Identifier: Hashable>(_ extent: Extent, _ id: Identifier) -> some View {
         modifier(EqualSizeModifier(extent: extent, dimension: .all, identifier: id.hashValue))
     }
+    
+    // MARK: - Ideal aspect framing
+    
+    // Prioritize width or height
+    // Set min/max aspect ratio range
+    // ex: (priority: width, ratio: (w: 16, h: 9)) -> some View
 }
